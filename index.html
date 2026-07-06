@@ -1,28 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
 <title>FinTrack</title>
-<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="style.css">
+
 </head>
 
 <body>
 
 <div class="container">
 
-<h1>👋 Welcome, Phantom</h1>
+<h1>💰 FinTrack</h1>
+
+<h2>Total Balance</h2>
+
+<h1 id="totalBalance">₹0</h1>
 
 <div class="card">
-<h2>FinTrack</h2>
-<p>Your personal finance tracker.</p>
-<h3>Balance: ₹0</h3>
-<p>Version 0.0.1 🚀</p>
+
+<h3>🏦 Axis Bank</h3>
+
+<h2 id="axisBalance">₹0</h2>
+
+</div>
+
+<div class="card">
+
+<h3>👛 Cash Wallet</h3>
+
+<h2 id="cashBalance">₹0</h2>
+
+</div>
+
+<hr>
+
+<h2>Add Transaction</h2>
+
+<label>Transaction Type</label>
+
+<select id="type">
+
+<option>Income</option>
+
+<option>Expense</option>
+
+<option>Transfer</option>
+
+</select>
+
+<br><br>
+
+<label>Payment</label>
+
+<select id="payment">
+
+<option>Axis</option>
+
+<option>Cash</option>
+
+<option>AxisToCash</option>
+
+<option>CashToAxis</option>
+
+</select>
+
+<br><br>
+
+<label>Category</label>
+
+<select id="category">
+
+<option>Salary</option>
+
+<option>Food</option>
+
+<option>Tea & Cigarette</option>
+
+<option>Weed</option>
+
+<option>Fuel</option>
+
+<option>Grocery</option>
+
+<option>Rent</option>
+
+<option>Due</option>
+
+<option>Blinkit</option>
+
+<option>Garage</option>
+
+<option>Shopping</option>
+
+<option>Entertainment</option>
+
+<option>Medical</option>
+
+<option>Others</option>
+
+</select>
+
+<br><br>
+
+<label>Amount</label>
+
+<input
+type="number"
+id="amount"
+placeholder="Enter Amount">
+
+<br><br>
+
+<label>Note</label>
+
+<input
+type="text"
+id="note"
+placeholder="Optional">
+
+<br><br>
+
+<button id="saveBtn">
+
+➕ Add Transaction
+
+</button>
+
+<hr>
+
+<h2>
+
+Recent Transactions
+
+</h2>
+
+<div id="history">
+
+No Transactions
+
 </div>
 
 </div>
+
+<script src="data.js"></script>
+
+<script src="storage.js"></script>
+
+<script src="transactions.js"></script>
+
+<script src="ui.js"></script>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
