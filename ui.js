@@ -24,16 +24,16 @@ function updateUI() {
     calculateBalances();
 
     document.getElementById("axisBalance").innerText =
-        "₹" + appData.balances.axis;
+        "₹" + appData.balances.axis.toFixed(2);
 
     document.getElementById("cashBalance").innerText =
-        "₹" + appData.balances.cash;
+        "₹" + appData.balances.cash.toFixed(2);
 
     document.getElementById("totalBalance").innerText =
         "₹" + (
             appData.balances.axis +
             appData.balances.cash
-        );
+        ).toFixed(2);
 
     const history =
         document.getElementById("history");
